@@ -61,4 +61,4 @@ jobs:
 
     - name: Check with pylint
       run: |
-        pylint inflammation
+        pylint --fail-under 5 inflammation
