@@ -32,14 +32,12 @@ class JSONDataSource:
 
         return data
 
-def analyse_data():
+def analyse_data(data_source):
     """Calculate the standard deviation by day between datasets
 
     Gets all the inflammation csvs within a directory, works out the mean
     inflammation value for each day across all datasets, then graphs the
     standard deviation of these means."""
-    data_dir = Path.cwd() / "data"
-    data_source = CSVDataSource(data_dir)
     data = data_source.read_patient_data()
 
     daily_standard_deviation = compute_standard_deviation_by_day(data)
