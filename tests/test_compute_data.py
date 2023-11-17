@@ -11,7 +11,7 @@ def test_analyse_data():
     """Test for changes in behaviour by comparing current behaviour with old behaviour"""
     from inflammation.compute_data import analyse_data
     path = Path.cwd() / "data"
-    new_result = analyse_data(path)
+    new_result = analyse_data()
 
     data_file_paths = glob.glob(os.path.join(path, 'inflammation*.csv'))
     if len(data_file_paths) == 0:
