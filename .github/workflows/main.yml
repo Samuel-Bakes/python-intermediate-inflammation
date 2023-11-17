@@ -33,9 +33,13 @@ jobs:
         python3 -m pip install --upgrade pip
         pip3 install -r requirements.txt
 
-    - name: Test with PyTest
+    - name: Test models with PyTest
       run: |
         python -m pytest --cov=inflammation.models tests/test_models.py
+
+    - name: Test compute data with PyTest
+      run: |
+        python -m pytest --cov=inflammation.compute_data tests/test_compute_data.py
 
   lint:
 
